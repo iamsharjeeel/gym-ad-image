@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#333; display:flex; justify-content:center; padding:20px; }
+
+  .ad {
+    width:1080px; height:1350px;
+    background:#0E1B16;
+    position:relative; overflow:hidden;
+    font-family:'Archivo',sans-serif;
+    color:#F2EFE6;
+    padding:72px 80px;
+    display:flex; flex-direction:column;
+  }
+
+  /* subtle grid texture */
+  .ad::before{
+    content:''; position:absolute; inset:0;
+    background-image:linear-gradient(rgba(242,239,230,.04) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(242,239,230,.04) 1px, transparent 1px);
+    background-size:54px 54px;
+  }
+
+  .top { display:flex; justify-content:space-between; align-items:center; position:relative; z-index:1;}
+  .brand { font-weight:800; letter-spacing:.18em; font-size:26px; }
+  .tag { font-family:'IBM Plex Mono',monospace; font-size:20px; color:#9DB5A8; }
+
+  .hook {
+    margin-top:84px; position:relative; z-index:1;
+    font-weight:900; font-stretch:90%;
+    font-size:96px; line-height:1.02; letter-spacing:-.01em;
+  }
+  .hook .dim { color:#9DB5A8; }
+
+  /* calculator card */
+  .card {
+    margin-top:70px; position:relative; z-index:1;
+    background:#F2EFE6; color:#14231C;
+    border-radius:20px; padding:52px 56px;
+    box-shadow:0 40px 80px rgba(0,0,0,.45);
+  }
+  .card .label {
+    font-family:'IBM Plex Mono',monospace; font-size:22px;
+    color:#5B6E63; letter-spacing:.1em; text-transform:uppercase;
+  }
+  .rows { margin-top:34px; display:flex; flex-direction:column; gap:26px; }
+  .row { display:flex; justify-content:space-between; align-items:baseline;
+         border-bottom:2px solid #DCD7C8; padding-bottom:20px; }
+  .row .k { font-size:30px; font-weight:600; }
+  .row .v { font-family:'IBM Plex Mono',monospace; font-size:32px; font-weight:600; }
+
+  .result { margin-top:40px; }
+  .result .label { color:#8A2F1D; }
+  .big {
+    font-weight:900; font-size:118px; letter-spacing:-.02em;
+    color:#B93A21; line-height:1; margin-top:10px;
+  }
+  .big span { font-size:44px; font-weight:700; color:#8A2F1D; letter-spacing:0; }
+
+  .cta {
+    margin-top:auto; position:relative; z-index:1;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .cta .line { font-size:34px; font-weight:700; }
+  .cta .line em { font-style:normal; color:#9DB5A8; font-weight:500; }
+  .btn {
+    background:#F2EFE6; color:#0E1B16;
+    font-weight:800; font-size:30px;
+    padding:26px 44px; border-radius:999px; letter-spacing:.02em;
+  }
+
+  .proof {
+    position:absolute; top:352px; right:64px; z-index:2;
+    background:#14231C; border:1px solid rgba(157,181,168,.35);
+    border-radius:14px; padding:20px 26px; transform:rotate(2deg);
+    font-family:'IBM Plex Mono',monospace; font-size:21px; color:#9DB5A8;
+  }
+  .proof b { color:#F2EFE6; }
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="top">
+    <div class="brand">XOVERA</div>
+    <div class="tag">gym revenue calculator</div>
+  </div>
+
+  <div class="hook">Your gym has<br>a leak.<br><span class="dim">This finds it.</span></div>
+
+  <div class="proof">case study: NPI<br><b>486 leads → 214 tours → 42 members</b></div>
+
+  <div class="card">
+    <div class="label">Your numbers last month</div>
+    <div class="rows">
+      <div class="row"><div class="k">Leads that came in</div><div class="v">120</div></div>
+      <div class="row"><div class="k">Leads that walked in</div><div class="v">31</div></div>
+      <div class="row"><div class="k">Avg. membership value</div><div class="v">$149/mo</div></div>
+    </div>
+    <div class="result">
+      <div class="label">Revenue leaking every month</div>
+      <div class="big">$7,940<span>/mo</span></div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="line">Run your real numbers. <em>Free, 60 seconds.</em></div>
+    <div class="btn">Calculate →</div>
+  </div>
+</div>
+</body>
+</html>
