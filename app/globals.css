@@ -14,7 +14,7 @@ body {
 .ad {
   width: 1080px;
   height: 1350px;
-  background: linear-gradient(145deg, #ef4136 0%, #fbb040 100%);
+  background: #0e1b16;
   position: relative;
   overflow: hidden;
   font-family: var(--font-archivo), sans-serif;
@@ -28,8 +28,8 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(242, 239, 230, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(242, 239, 230, 0.04) 1px, transparent 1px);
   background-size: 54px 54px;
   pointer-events: none;
 }
@@ -50,16 +50,11 @@ body {
 .tag {
   font-family: var(--font-ibm-plex-mono), monospace;
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.hook-block {
-  margin-top: 84px;
-  position: relative;
-  z-index: 1;
+  color: #9db5a8;
 }
 
 .hook {
+  margin-top: 84px;
   position: relative;
   z-index: 1;
   font-weight: 900;
@@ -70,11 +65,17 @@ body {
 }
 
 .hook .dim {
-  color: rgba(255, 255, 255, 0.78);
+  color: #9db5a8;
+}
+
+.card-wrap {
+  margin-top: 70px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
 }
 
 .card {
-  margin-top: 70px;
   position: relative;
   z-index: 1;
   background: #f2efe6;
@@ -144,33 +145,38 @@ body {
 
 .cta {
   margin-top: auto;
+  padding-top: 56px;
   position: relative;
   z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 32px;
+  gap: 48px;
+  flex-shrink: 0;
 }
 
 .cta .line {
   font-size: 34px;
   font-weight: 700;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
 .cta .line em {
   font-style: normal;
-  color: rgba(255, 255, 255, 0.78);
+  color: #9db5a8;
   font-weight: 500;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   flex-shrink: 0;
   white-space: nowrap;
   background: #f2efe6;
-  color: #1a1208;
+  color: #0e1b16;
   font-weight: 800;
   font-size: 30px;
   padding: 26px 44px;
@@ -183,19 +189,19 @@ body {
 }
 
 .proof {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  top: -28px;
+  right: 24px;
+  z-index: 3;
   width: fit-content;
-  margin-left: auto;
-  margin-top: 28px;
-  background: rgba(20, 12, 8, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: #14231c;
+  border: 1px solid rgba(157, 181, 168, 0.35);
   border-radius: 14px;
   padding: 20px 26px;
   transform: rotate(2deg);
   font-family: var(--font-ibm-plex-mono), monospace;
   font-size: 21px;
-  color: rgba(255, 255, 255, 0.78);
+  color: #9db5a8;
 }
 
 .proof b {
