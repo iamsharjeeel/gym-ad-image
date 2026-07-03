@@ -1,23 +1,34 @@
+import Image from "next/image";
+
 export default function GymAd() {
   return (
     <div className="ad">
       <div className="top">
-        <div className="brand">XOVERA</div>
+        <Image
+          src="/xovera-color.svg"
+          alt="Xovera"
+          width={170}
+          height={52}
+          className="logo"
+          priority
+        />
         <div className="tag">gym revenue calculator</div>
       </div>
 
-      <div className="hook">
-        Your gym has
-        <br />
-        a leak.
-        <br />
-        <span className="dim">This finds it.</span>
-      </div>
+      <div className="hook-block">
+        <div className="hook">
+          Your gym has
+          <br />
+          a leak.
+          <br />
+          <span className="dim">This finds it.</span>
+        </div>
 
-      <div className="proof">
-        case study: NPI
-        <br />
-        <b>486 leads → 214 tours → 42 members</b>
+        <div className="proof">
+          case study: NPI
+          <br />
+          <b>486 leads → 214 tours → 42 members</b>
+        </div>
       </div>
 
       <div className="card">
@@ -48,7 +59,9 @@ export default function GymAd() {
         <div className="line">
           Run your real numbers. <em>Free, 60 seconds.</em>
         </div>
-        <div className="btn">Calculate →</div>
+        <div className="btn">
+          Calculate <span className="arrow">→</span>
+        </div>
       </div>
     </div>
   );

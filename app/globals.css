@@ -14,7 +14,7 @@ body {
 .ad {
   width: 1080px;
   height: 1350px;
-  background: #0e1b16;
+  background: linear-gradient(145deg, #ef4136 0%, #fbb040 100%);
   position: relative;
   overflow: hidden;
   font-family: var(--font-archivo), sans-serif;
@@ -28,9 +28,10 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(242, 239, 230, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(242, 239, 230, 0.04) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
   background-size: 54px 54px;
+  pointer-events: none;
 }
 
 .top {
@@ -41,20 +42,24 @@ body {
   z-index: 1;
 }
 
-.brand {
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  font-size: 26px;
+.logo {
+  height: 40px;
+  width: auto;
 }
 
 .tag {
   font-family: var(--font-ibm-plex-mono), monospace;
   font-size: 20px;
-  color: #9db5a8;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hook-block {
+  margin-top: 84px;
+  position: relative;
+  z-index: 1;
 }
 
 .hook {
-  margin-top: 84px;
   position: relative;
   z-index: 1;
   font-weight: 900;
@@ -65,7 +70,7 @@ body {
 }
 
 .hook .dim {
-  color: #9db5a8;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .card {
@@ -144,6 +149,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 32px;
 }
 
 .cta .line {
@@ -153,13 +159,18 @@ body {
 
 .cta .line em {
   font-style: normal;
-  color: #9db5a8;
+  color: rgba(255, 255, 255, 0.78);
   font-weight: 500;
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
   background: #f2efe6;
-  color: #0e1b16;
+  color: #1a1208;
   font-weight: 800;
   font-size: 30px;
   padding: 26px 44px;
@@ -167,19 +178,24 @@ body {
   letter-spacing: 0.02em;
 }
 
+.btn .arrow {
+  font-weight: 800;
+}
+
 .proof {
-  position: absolute;
-  top: 352px;
-  right: 64px;
+  position: relative;
   z-index: 2;
-  background: #14231c;
-  border: 1px solid rgba(157, 181, 168, 0.35);
+  width: fit-content;
+  margin-left: auto;
+  margin-top: 28px;
+  background: rgba(20, 12, 8, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 14px;
   padding: 20px 26px;
   transform: rotate(2deg);
   font-family: var(--font-ibm-plex-mono), monospace;
   font-size: 21px;
-  color: #9db5a8;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .proof b {
